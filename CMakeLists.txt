@@ -2,13 +2,24 @@ cmake_minimum_required(VERSION 3.22)
 
 project(mini_web_server)
 
-SET(INCLUDE_FILES include/mini_web_server/mini_web_server.h)
+SET(INCLUDE_FILES 
+    include/mini_web_server/mini_web_server.h 
+    include/mini_web_server/mini_web_server_builder.h 
+)
 
-SET(SRC_FILES src/mini_web_server.cpp)
+SET(SRC_FILES 
+    src/mini_web_server.cpp
+    src/mini_web_server_builder.cpp
+)
 
-SET(MAIN_FILE src/main.cpp)
+SET(MAIN_FILE 
+    src/main.cpp
+)
 
-SET(TEST_FILES test/mini_web_server_test.cpp)
+SET(TEST_FILES 
+    test/mini_web_server_test.cpp
+    test/mini_web_server_builder_test.cpp
+)
 
 add_executable(mini_web_server ${MAIN_FILE} ${SRC_FILES} ${INCLUDE_FILES})
 
