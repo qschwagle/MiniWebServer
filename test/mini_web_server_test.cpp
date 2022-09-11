@@ -4,5 +4,6 @@
 
 TEST(MiniWebServer, Constructor) 
 {
-    MiniWebServer server;
+    MiniWebServer::ConfigState config_state;
+    MiniWebServer server(config_state);
 }

@@ -28,7 +28,7 @@ immediately opens a port using the information provided in the toml
 - [x] Restructure CMakeLists.txt to use variables for include files, shared source files between
   executable and tests, and main file for executable mini\_web\_server
 - [x] Add googletests for class MiniWebServer constructor
-- [ ] Create the class MiniWebServerState for holding the webserver state ( place inside
+- [x] Create the class MiniWebServerState for holding the webserver state ( place inside
   MiniWebServer). Modify MiniWebServer to have a constructor that accepts the state object
 - [ ] Create the class MiniWebServerBuilder to create a MiniWebServer instance.
 
