@@ -31,8 +31,8 @@ immediately opens a port using the information provided in the toml
 - [x] Create the class MiniWebServerState for holding the webserver state ( place inside
   MiniWebServer). Modify MiniWebServer to have a constructor that accepts the state object
 - [x] Create the class MiniWebServerBuilder to create a MiniWebServer instance.
-- [ ] Add Fields to MiniWebServerConfigState ( note: State -> ConfigState )
+- [x] Add Fields to MiniWebServerConfigState ( note: State -> ConfigState )
     - ip address + port
     - serving directory
-- [ ] Add Setters in MiniWebServerBuilder for ip address + port and serving directory
+- [x] Add Setters in MiniWebServerBuilder for ip address + port and serving directory
 

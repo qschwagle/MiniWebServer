@@ -4,12 +4,10 @@ project(mini_web_server)
 
 SET(INCLUDE_FILES 
     include/mini_web_server/mini_web_server.h 
-    include/mini_web_server/mini_web_server_builder.h 
 )
 
 SET(SRC_FILES 
     src/mini_web_server.cpp
-    src/mini_web_server_builder.cpp
 )
 
 SET(MAIN_FILE 
@@ -22,6 +20,8 @@ SET(TEST_FILES
 )
 
 add_executable(mini_web_server ${MAIN_FILE} ${SRC_FILES} ${INCLUDE_FILES})
+
+SET_PROPERTY(TARGET mini_web_server PROPERTY CXX_STANDARD 20)
 
 target_include_directories(mini_web_server PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
@@ -43,6 +43,8 @@ add_executable(mini_web_server_test ${SRC_FILES} ${INCLUDE_FILES} ${TEST_FILES})
 target_include_directories(mini_web_server_test PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 target_link_libraries(mini_web_server_test PUBLIC GTest::gtest_main)
+
+SET_PROPERTY(TARGET mini_web_server_test PROPERTY CXX_STANDARD 20)
 
 include(GoogleTest)
 
