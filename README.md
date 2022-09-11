@@ -20,6 +20,9 @@ immediately opens a port using the information provided in the toml
 ### Class(MiniWebServerBuilder)
 - Builds an Instance of the Webserver 
 
+### Class(ConfigFileReader)
+- Reads in the configuration and sets it in the builder
+
 ## Todo
 - [x] Setup project with src, include, and test directories
 - [x] Setup cmake with compile\_commands.json
@@ -35,4 +38,5 @@ immediately opens a port using the information provided in the toml
     - ip address + port
     - serving directory
 - [x] Add Setters in MiniWebServerBuilder for ip address + port and serving directory
-
+- [ ] Create Configuration File Reader class. Functions should be to both read a file and read
+  from string
