@@ -87,4 +87,7 @@ path = "/some/path"
   from string
 - [ ] Add Comments to TOML. Make TOML type checking stricter. ( NICE TO HAVE )
 - [x] Have Main try to find and call ConfigFileReader with file. Crash otherwise
+- [x] Add private helper Init and Run Methods to MiniWebServer. Init setups the server. 
+  Run contains the main loop. Run also calls init to setup the server. The main function only needs
+  (and can) call Run.
 

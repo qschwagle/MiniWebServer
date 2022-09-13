@@ -74,7 +74,6 @@ class MiniWebServerBuilder
     std::string mDirectoryPath;
 };
 
-
 /**
  * Core Program class
  */
@@ -137,6 +136,19 @@ public:
     MiniWebServer(const ConfigState& config_state) : mConfigState(config_state)
     {
     }
+
+    /**
+     * initializes and runs the run loop for the server.
+     * \returns the application exit code
+     */
+    int Run();
+
+private:
+    /**
+     * Initializes the server, such as opening the listening socket.
+     * \returns true on success. otherwise false
+     */
+    bool Init();
 
 private:
     /// configuration state 
