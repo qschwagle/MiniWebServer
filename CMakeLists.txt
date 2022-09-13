@@ -5,11 +5,15 @@ project(mini_web_server)
 SET(INCLUDE_FILES 
     include/mini_web_server/mini_web_server.h 
     include/mini_web_server/configuration_reader.h
+    include/mini_web_server/connection.h
+    include/mini_web_server/listener.h
 )
 
 SET(SRC_FILES 
     src/mini_web_server.cpp
     src/configuration_reader.cpp
+    src/listener.cpp
+    src/connection.cpp
 )
 
 SET(MAIN_FILE 

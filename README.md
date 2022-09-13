@@ -90,4 +90,9 @@ path = "/some/path"
 - [x] Add private helper Init and Run Methods to MiniWebServer. Init setups the server. 
   Run contains the main loop. Run also calls init to setup the server. The main function only needs
   (and can) call Run.
+- [x] Add Listener and Connection Classes. Listener should accept the port and address. Connection
+  should have Read() and Write() which both accept char\* buffers with length.
+- [x] Add A Listener to MiniWebServer members and a hashmap of connections
+
+
 

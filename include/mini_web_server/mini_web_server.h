@@ -4,6 +4,10 @@
 #include <string>
 #include <cstdint>
 #include <memory>
+#include <unordered_map>
+
+#include "mini_web_server/listener.h"
+#include "mini_web_server/connection.h"
 
 class MiniWebServer;
 
@@ -154,6 +158,11 @@ private:
     /// configuration state 
     ConfigState mConfigState;
 
+    /// server listener
+    std::unique_ptr<Listener> mListener{nullptr};
+
+    /// active connections
+    std::unordered_map<std::uint64_t, Connection> mConnections;
 };
 
 #endif
