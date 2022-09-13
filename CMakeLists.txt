@@ -4,10 +4,12 @@ project(mini_web_server)
 
 SET(INCLUDE_FILES 
     include/mini_web_server/mini_web_server.h 
+    include/mini_web_server/configuration_reader.h
 )
 
 SET(SRC_FILES 
     src/mini_web_server.cpp
+    src/configuration_reader.cpp
 )
 
 SET(MAIN_FILE 
@@ -17,6 +19,7 @@ SET(MAIN_FILE
 SET(TEST_FILES 
     test/mini_web_server_test.cpp
     test/mini_web_server_builder_test.cpp
+    test/configuration_reader_test.cpp
 )
 
 add_executable(mini_web_server ${MAIN_FILE} ${SRC_FILES} ${INCLUDE_FILES})

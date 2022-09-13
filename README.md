@@ -1,9 +1,54 @@
 # Mini Web Server
 
 ## Project Description
+
 Mini Web Server lives up to its name! Its a simple, partial implementation of HTTP/1.1 to be used 
 for server files from a directory. It uses a toml file for reading in the configuration and
 immediately opens a port using the information provided in the toml
+
+## Configuration File
+
+A Toml file containing the configuration for the server.
+
+By default, it will check the current directory for the file. If not found, it will error.
+
+### Format
+
+There are three fields which currently can be present in the file. If the fields are not present the
+default values will be used
+
+#### address ( default = 127.0.0.1 )
+
+The address field is an ipv4 address which the server will use to listen for connections. If you
+want to listen on every address and allow in-bound connections, listen on 0.0.0.0
+
+##### Example
+
+``` 
+address = "0.0.0.0"
+```
+
+#### port ( default = 80 )
+
+The port is the port which the server will for incoming connections. All ports below 1000 requires
+elevated priveleges to use. Change this port to a value above 1000.
+
+##### Example
+
+```
+port = 4000
+```
+
+#### path ( defualt = . )
+
+The path is the root directory of the webserver. Default root will be the current directory the
+application is ran from
+
+##### Example
+
+```
+path = "/some/path"
+```
 
 ## Architecture
 
@@ -38,5 +83,7 @@ immediately opens a port using the information provided in the toml
     - ip address + port
     - serving directory
 - [x] Add Setters in MiniWebServerBuilder for ip address + port and serving directory
-- [ ] Create Configuration File Reader class. Functions should be to both read a file and read
+- [x] Create Configuration File Reader class. Functions should be to both read a file and read
   from string
+- [ ] Add Comments to TOML. Make TOML type checking stricter. ( NICE TO HAVE )
+

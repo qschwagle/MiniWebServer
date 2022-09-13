@@ -53,12 +53,15 @@ class MiniWebServerBuilder
      */
     void SetDirectoryPath(std::string path) noexcept { mDirectoryPath = path; }
 
+    const std::string& GetAddress() const noexcept { return mAddress; }
+    const std::int16_t GetPort() const noexcept { return mPort; }
+    const std::string& GetDirectoryPath() const noexcept { return mDirectoryPath; } 
+
     /**
      * Creates and instance of MiniWebServer based on current builder state
      * \returns a new MiniWebServer
      */
     std::unique_ptr<MiniWebServer> Make();
-
 
     private:
     /// default address loopback ( 127.0.0.1 )
