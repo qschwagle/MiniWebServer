@@ -9,7 +9,6 @@ void ConfigurationReader::ReadFromFile(MiniWebServerBuilder& builder, std::strin
 {
     std::ifstream file{path};
 
-
     if(file.fail()) {
         std::stringstream err_msg;
         err_msg << "Unable to open file: " << path << std::endl;

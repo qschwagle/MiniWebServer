@@ -86,4 +86,5 @@ path = "/some/path"
 - [x] Create Configuration File Reader class. Functions should be to both read a file and read
   from string
 - [ ] Add Comments to TOML. Make TOML type checking stricter. ( NICE TO HAVE )
+- [x] Have Main try to find and call ConfigFileReader with file. Crash otherwise
 
